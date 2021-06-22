@@ -28,5 +28,9 @@ def get_Store_Prices():
     for store in store_prices:
         print(store["price"])
     
+<<<<<<< HEAD
 # print(get_NSW_Suburb_List(), get_Store_Prices())
 print(get_Store_Prices())
+=======
+print(get_NSW_Suburb_List(), get_Store_Prices())
+>>>>>>> 7f201d24df87838ec59920899e9f058804a1971d
