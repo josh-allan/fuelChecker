@@ -12,13 +12,15 @@ def checkNSW():
     NSW = 2
     return fuel["regions"][NSW]["prices"]
 
-def suburb():
+def get_NSW_Suburb_List():
     #call CheckNSW to check for single store to test logic
-    suburb = checkNSW()
+    suburb_list = checkNSW()
     #iterate over list using known values
-    for i in suburb:
-        if i["suburb"] == "Revesby":
-            return i
-        
+    for suburb in suburb_list:
+        if suburb["suburb"] == "Revesby":
+            return suburb
 
-pprint.pprint(suburb())
+
+
+    
+pprint.pprint(get_NSW_Suburb_List())
