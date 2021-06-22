@@ -9,7 +9,7 @@ def check_NSW():
     http = urllib3.PoolManager()
     r = http.request('GET', url)
     fuel = json.loads(r.data)
-    NSW = fuel["regions"]["prices"]
+    NSW = fuel["regions"]
     for state in NSW:
         if state["region"] == "NSW":
             return state    
@@ -28,9 +28,5 @@ def get_Store_Prices():
     for store in store_prices:
         print(store["price"])
     
-<<<<<<< HEAD
-# print(get_NSW_Suburb_List(), get_Store_Prices())
-print(get_Store_Prices())
-=======
-print(get_NSW_Suburb_List(), get_Store_Prices())
->>>>>>> 7f201d24df87838ec59920899e9f058804a1971d
+
+print(get_NSW_Suburb_List())
