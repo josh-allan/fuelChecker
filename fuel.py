@@ -22,6 +22,6 @@ def get_NSW_Suburb_List():
 def get_Store_Prices():
     store_prices = get_NSW_Suburb_List()
     for store in store_prices:
-        return store
+        print(store["price"])
     
 print(get_NSW_Suburb_List(), get_Store_Prices())
